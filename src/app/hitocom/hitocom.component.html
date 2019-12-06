@@ -1,0 +1,39 @@
+<div>
+    <div>
+        <a class= 'btn btn-info' routerLink="/hitoform"> Crear  un  nuevo Hito</a>
+      <table class ="table">
+        <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">desc</th>
+              <th scope="col">fechaini</th>
+              <th scope="col">fechaend</th>
+              <th scope="col">ACCION</th>
+            </tr>
+          </thead>
+      <tr *ngFor='let hito of hitos'>
+        <td>
+          {{ hito.id }}
+        </td>
+        <td>
+          {{ hito.nombreH}}
+        </td>
+        <td>
+            {{ hito.desch}}
+          </td>
+          <td>
+            {{ hito.fechainih}}
+          </td>
+          <td>
+            {{ hito.fechaendh}}
+          </td>
+       
+        <td>  
+          <a class= 'btn btn-info' routerLink="/hitoform/{{hito.id}}"> Actualizar</a>
+          <a class= 'btn btn-danger'(click)="delete(hito.id)"> ELIMINAR</a>
+        </td>
+      </tr>
+    </table>
+    </div>
+  </div>

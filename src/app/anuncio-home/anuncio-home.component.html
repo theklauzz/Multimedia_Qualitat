@@ -1,0 +1,32 @@
+<div>
+    <div>
+        <a class= 'btn btn-info' routerLink="/anuncioform"> Crear  un  nuevo Hito</a>
+      <table class ="table">
+        <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Titulo</th>
+              <th scope="col">Descripcion</th>
+              <th scope="col">ACCION</th>
+            </tr>
+          </thead>
+      <tr *ngFor='let anuncio of anuncios'>
+        <td>
+          {{ anuncio.id }}
+        </td>
+        <td>
+          {{ anuncio.Titulo}}
+        </td>
+        <td>
+            {{ anuncio.desca}}
+          </td>
+         
+       
+        <td>  
+          <a class= 'btn btn-info' routerLink="/anuncioform/{{anuncio.id}}"> Actualizar</a>
+          <a class= 'btn btn-danger'(click)="delete(anuncio.id)"> ELIMINAR</a>
+        </td>
+      </tr>
+    </table>
+    </div>
+  </div>

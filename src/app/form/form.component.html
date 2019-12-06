@@ -1,0 +1,14 @@
+<form>
+<div class="form-group">
+<label>Nombre</label>
+<input  [(ngModel)]= "tipo.nombreT" type="text" class="form-control" id="nombreT"  name="nombreT" placeholder="Ingrese el nombre del nuevo Tipo">
+</div>
+
+<div class="form-group">
+        <button (click)="saveTipo()" class="btn btn-success" routerLink="/home">Crear</button>
+ </div>
+        
+
+
+
+</form>

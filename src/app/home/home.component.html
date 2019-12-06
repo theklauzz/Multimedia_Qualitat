@@ -1,0 +1,29 @@
+<div>
+  <div>
+      <a class= 'btn btn-info' routerLink="/form"> Crear  un  nuevo Tipo</a>
+    <table class ="table">
+      <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Accion</th>
+          </tr>
+        </thead>
+    <tr *ngFor='let tipo of tipos'>
+      <td>
+        {{ tipo.id }}
+      </td>
+      <td>
+        {{ tipo.nombreT }}
+      </td>
+     
+      <td>  
+        <a class= 'btn btn-info' routerLink="/form/{{tipo.id}}"> Actualizar</a>
+        <a class= 'btn btn-danger'(click)="delete(tipo.id)"> ELIMINAR</a>
+      </td>
+    </tr>
+  </table>
+  </div>
+</div>
+
+

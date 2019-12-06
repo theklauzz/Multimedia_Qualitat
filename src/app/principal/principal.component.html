@@ -1,0 +1,89 @@
+<div class="container" id="fondo">
+        <div class="row">
+          <div class="col">
+                <table class ="table">
+                        <thead>
+                            <tr>
+                            
+                              <th scope="col">Nombre</th>
+                              <th scope="col">desc</th>
+                              <th scope="col">fechaini</th>
+                              <th scope="col">fechaend</th>
+                              
+                            </tr>
+                          </thead>
+                      <tr *ngFor='let hito of hitos'>
+                    
+                        <td>
+                          {{ hito.nombreH}}
+                        </td>
+                        <td>
+                            {{ hito.desch}}
+                          </td>
+                          <td>
+                            {{ hito.fechainih}}
+                          </td>
+                          <td>
+                            {{ hito.fechaendh}}
+                          </td>
+                    
+                      </tr>
+                    </table>
+          </div>
+          <div class="col">
+              <div class="clock">
+                  <p>{{dia}}</p>
+                  <p>{{fecha}}</p>
+                  <div class="hours">
+                      <div class="horas">
+                          <span class="mishoras">{{hora}}:{{minutos}}</span>
+                          <span class="ampm">{{ampm}}</span>
+                      </div>
+                  </div>
+                  <div></div>
+                  <span></span>
+                  <span class="segundos">{{segundos}}</span>
+          </div>
+
+          </div>
+          <div class="col">
+                <table class ="table">
+                        <thead>
+                            <tr>
+                            
+                              <th scope="col">Titulo</th>
+                              <th scope="col">Descripcion</th>
+                             
+                            </tr>
+                          </thead>
+                      <tr *ngFor='let anuncio of anuncios'>
+                        
+                        <td>
+                          {{ anuncio.Titulo}}
+                        </td>
+                        <td>
+                            {{ anuncio.desca}}
+                          </td>
+                         
+                       
+                      
+                      </tr>
+                    </table></div>
+          <div class="w-100"></div>
+          <div class="col">
+              <iframe width="340" height="500" src="https://www.youtube.com/embed/Em4cm5NAo7A?controls=0&loop=1&autoplay=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+          
+          
+          
+          </div>
+          <div class="col">
+              <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FQualitat.Latam%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
+               width="340" height="500" style="border:none;overflow:hidden" 
+               scrolling="yes" frameborder="10" allowTransparency="true" allow="encrypted-media"></iframe>
+
+          </div>
+          <div class="col">
+              <iframe src="https://www.instagram.com/p/B2C7ylogK9n/embed" width="320" height="400" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+          </div>
+        </div>
+      </div>
